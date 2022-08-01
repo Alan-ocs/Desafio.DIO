@@ -1,18 +1,30 @@
 #!/bin/bash
 
+echo "executando script"
 
-echo "Criando usuários do sistema...."
+usuario01="User01"
+usuario02="User02"
+usuario03="User03"
+usuario04="User04"
 
-useradd guest10 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
-passwd guest10 -e
+echo "Criando usuário $usuario01"
 
-useradd guest11 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
-passwd guest11 -e
+useradd $usuario01 -c "Usuário convidado 01" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
+passwd $usuario01 -e
 
-useradd guest12 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
-passwd guest12 -e
+echo "Criando usuário $usuario02"
 
-useradd guest13 -c "Usuário convidado" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
-passwd guest13 -e
+useradd $usuario02 -c "Usuário convidado 02" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
+passwd $usuario02 -e
+
+echo "Criando usuário $usuario03"
+
+useradd $usuario03 -c "Usuário convidado 03" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
+passwd $usuario03 -e
+
+echo "Criando usuário $usuario04"
+
+useradd $usuario04 -c "Usuário convidado 04" -s /bin/bash -m -p $(openssl passwd -crypt Senha123)
+passwd $usuario04 -e
 
 echo "Finalizado!!"
